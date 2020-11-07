@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bkg-color: #2233442C;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --ethickness-box-color: #2233443C;
+}
+
+body {
+  width: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 100vh;
+  background-color: var(--bkg-color);
+}
+
+
+.times::after, .times {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+.times {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 60px auto;
+  font-size: 1.3em;
+  background-color: red;
+}
+
+.times::after {
+    content: '';
+    position: absolute;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    transform: translate(50%, -50%);
+}
+
+
+.select-seconds::after {
+  animation: timerAnimation 1s infinite linear;
+}
+
+.select-minutes::after {
+  animation: timerAnimationMinutes 1.2s infinite linear;
+}
+
+.select-day::after {
+  animation: timerAnimation 1.1s infinite linear;
+}
+
+.select-hours::after {
+  animation: timerAnimation 1.1s infinite linear;
+}
+
+@keyframes timerAnimation {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+       transform: rotate(360deg)
+  }
+}
+
+@keyframes timerAnimationMinutes {
+  0%{
+      transform: rotate(0deg);
+  }
+  25%{
+      transform: rotate(90deg);
+  }
+  100%{
+       transform: rotate(360deg)
+  }
+}
