@@ -49,7 +49,7 @@ setInterval(() => {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  let day = date.getDay();
+  let day = date.getDay() +1;
 
   removeElementNode('wrapper')
   createdElementNode(
